@@ -1,0 +1,33 @@
+{
+  "name": "react-utils-button",
+  "version": "0.2.0",
+  "description": "Lightweight React Button component, serving as an utility wrapper over the HTML button element.",
+  "author": "Raul Rene Lepsa <raul.lepsa@gmail.com> (https://github.com/raulrene)",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "webpack -d"
+  },
+  "keywords": [
+    "react-utils-button",
+    "react-utils",
+    "react",
+    "button",
+    "react-utils-bundle",
+    "react-component"
+  ],
+  "dependencies": {
+    "prop-types": "^15.5.7"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "react": "^15.6.1",
+    "webpack": "^2.4.1"
+  }
+}
