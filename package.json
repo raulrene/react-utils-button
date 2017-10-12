@@ -6,7 +6,8 @@
   "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
-    "build": "webpack -d"
+    "build": "webpack -d",
+    "test": "webpack --config webpack.spec.config.js --hide-modules; node_modules/.bin/mocha --require jsdom-global/register dist/index.spec.js && rm dist/index.spec.js"
   },
   "keywords": [
     "react-utils-button",
@@ -30,8 +31,18 @@
     "babel-preset-es2017": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "chai": "^4.1.2",
+    "chai-enzyme": "^0.8.0",
     "clean-webpack-plugin": "^0.1.17",
+    "enzyme": "2.8.0",
+    "jsdom": "^11.3.0",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^4.0.1",
     "react": "^15.6.1",
+    "react-addons-test-utils": "^15.4.0",
+    "react-dom": "^15.0.0",
+    "sinon": "^4.0.1",
+    "sinon-chai": "^2.14.0",
     "webpack": "^2.4.1"
   }
 }

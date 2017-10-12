@@ -11,7 +11,7 @@ class ReactUtilsButton extends React.Component {
                     onClick={!disabled ? onClick : () => {}}    // Only trigger onClick if component is not disabled
                     disabled={disabled ? 'disabled' : undefined}>
 
-                <span className='input-button-value'>{value}</span>
+                <span className='utils-button-value'>{value}</span>
             </button>
         );
     }
