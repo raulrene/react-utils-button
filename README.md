@@ -1,12 +1,14 @@
 # React Utils Button
 Lightweight React Button component, serving as an utility wrapper over the HTML button element.
 
-##Installation
+## Installation
+
 ```sh
-npm install react-slider
+npm install react-utils-button
 ```
 
-##Usage
+## Usage
+
 ```javascript
 import Button from 'react-utils-button';
 
@@ -23,7 +25,7 @@ The library can also be loaded via require:
 const Button = require('react-utils-button')
 ```
 
-##Options
+## Options
 - **value** (string, required) - value to be displayed inside the button
 - **className** (string) - extra classes
 - **onClick** (function) - callback function
