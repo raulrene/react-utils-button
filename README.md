@@ -13,7 +13,7 @@ npm install react-utils-button
 import Button from 'react-utils-button';
 
 <Button value='Click me'
-		className="my-extra-class"
+		className='my-extra-class'
 		onClick={() => { console.log('clicked'); }}
 		active={false}
 		disabled={false}/>
@@ -22,7 +22,7 @@ import Button from 'react-utils-button';
 The library can also be loaded via require: 
 
 ```javascript
-const Button = require('react-utils-button')
+const Button = require('react-utils-button');
 ```
 
 ## Options

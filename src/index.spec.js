@@ -16,7 +16,7 @@ describe('Button Component', () => {
         afterEach(() => sandbox.restore());
 
         it('should throw warning for missing prop "value"', () => {
-            shallow(<Button />);
+            shallow(<Button/>);
             expectMissingProp('value', 'ReactUtilsButton');
         });
 
@@ -69,9 +69,10 @@ function interceptConsoleErrors() {
 
 /**
  * Assert for a missing property inside a component
- * @param prop {String} Property name
- * @param component {String} Component name
+ * @param {String} prop Property name
+ * @param {String} component Component name
  */
 function expectMissingProp(prop, component) {
-    sinon.assert.calledWithMatch(console.error, new RegExp(`Failed prop type: The prop \`${prop}\` is marked as required in \`${component}\``));
+    sinon.assert.calledWithMatch(console.error,
+        new RegExp(`Failed prop type: The prop \`${prop}\` is marked as required in \`${component}\``));
 }

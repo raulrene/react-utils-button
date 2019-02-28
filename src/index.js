@@ -8,7 +8,8 @@ class ReactUtilsButton extends React.Component {
         return (
             <button type="button"
                     className={`utils-button${className ? ` ${className}` : ''}${active ? ' utils-button--active' : ''}`}
-                    onClick={!disabled ? onClick : () => {}}    // Only trigger onClick if component is not disabled
+                    // Only trigger onClick if component is not disabled
+                    onClick={!disabled ? onClick : () => {}}
                     disabled={disabled ? 'disabled' : undefined}>
 
                 <span className='utils-button-value'>{value}</span>
