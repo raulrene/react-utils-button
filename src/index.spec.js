@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 import chai, { expect } from 'chai';
 import sinonChai from 'sinon-chai';
 import chaiEnzyme from 'chai-enzyme';
@@ -30,9 +31,14 @@ describe('Button Component', () => {
             expect(wrapper).to.have.className('custom-class');
         });
 
-        it('should always have "utils-button--active" if active props is received', () => {
+        it('should always have "utils-button--active" if active prop is received', () => {
             const wrapper = shallow(<Button active={true} value='click'/>);
             expect(wrapper).to.have.className('utils-button--active');
+        });
+
+        it('should always have "utils-button--loading" if loading prop is received', () => {
+            const wrapper = shallow(<Button loading={true} value='click'/>);
+            expect(wrapper).to.have.className('utils-button--loading');
         });
 
         it('should trigger the onClick callback when button is pressed', () => {
@@ -41,6 +47,16 @@ describe('Button Component', () => {
             wrapper.simulate('click');
             expect(callback).to.have.been.calledOnce;
         });
+
+        it('should have the value received in props', () => {
+            const wrapper = shallow(<Button value='click'/>);
+            expect(wrapper.find('.utils-button-value')).to.have.text('click');
+        });
+    });
+
+    describe('when it\'s disabled', () => {
+        const sandbox = sinon.sandbox.create();
+        afterEach(() => sandbox.restore());
 
         it('should not trigger onClick callback when it\'s disabled', () => {
             const callback = sandbox.stub();
@@ -52,11 +68,6 @@ describe('Button Component', () => {
         it('should be disabled when prop is received', () => {
             const wrapper = shallow(<Button disabled={true} value='click'/>);
             expect(wrapper).to.have.attr('disabled', 'disabled');
-        });
-
-        it('should have the value received in props', () => {
-            const wrapper = shallow(<Button value='click'/>);
-            expect(wrapper.find('.utils-button-value')).to.have.text('click');
         });
     });
 });

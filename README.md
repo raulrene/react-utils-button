@@ -16,6 +16,7 @@ import Button from 'react-utils-button';
 		className='my-extra-class'
 		onClick={() => { console.log('clicked'); }}
 		active={false}
+		loading={false}
 		disabled={false}/>
 ```
 
@@ -31,6 +32,7 @@ const Button = require('react-utils-button');
 - **onClick** (function) - callback function
 - **active** (boolean, default: false) - force active state; adds a **utils-button--active** class
 - **disabled** (boolean, default: false) - disabled state for the button; once disabled the onClick callback does not fire anymore
+- **loading** (boolean, default: false) - sets a loading state, also automatically making it disabled; adds a **utils-button--loading** class. This can be used to style a loading state, for example a spinner to let the user know something is happening.
 
 ### Licence
 The code is open-source and available under the MIT Licence. More details in the LICENCE.md file.
