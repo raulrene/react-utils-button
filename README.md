@@ -1,10 +1,12 @@
 # React Utils Button [![Build Status](https://travis-ci.org/raulrene/react-utils-button.svg?branch=master)](https://travis-ci.org/raulrene/react-utils-button)
 Lightweight React Button component, serving as an utility wrapper over the HTML button element.
 
+**Demo:** https://raulrene.github.io/react-utils-button/example/
+
 ## Installation
 
 ```sh
-npm install react-utils-button
+npm i --save react-utils-button
 ```
 
 ## Usage

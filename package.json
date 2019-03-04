@@ -1,6 +1,6 @@
 {
     "name": "react-utils-button",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "description": "Lightweight React Button component, serving as a reusable utility wrapper over the HTML button element.",
     "author": "Raul Rene Lepsa <raul.lepsa@gmail.com> (https://github.com/raulrene)",
     "license": "MIT",
